@@ -157,3 +157,41 @@ class Bottle{
 
 let b1 = new Bottle(); // new Bottle in the heap
 console.log(b1);
+
+// CONSTRUCTORS
+class BottleMaker{
+    constructor(public name: string, public price: number){}
+}
+
+let b11 = new BottleMaker("Milton", 1500);
+
+class HumanMaker{
+    age = 1;
+    constructor(name: string, isHandsome: boolean, isSmart: boolean){}
+}
+
+let sara = new HumanMaker("Sarah Tancredi", true, true);
+console.log(sara);
+
+
+// Another way of doing this 
+// we can initialize the constructor in a single line or just our simple java way old Skool
+
+class Music{
+    public name;
+    public artist;
+    public thumbnail;
+    public length;
+    public free;
+    constructor(name: string, artist: string, thumbnail :string, length : number, free: boolean){
+        this.name = name;
+        this.artist = artist;
+        this.thumbnail = thumbnail;
+        this.length = length;
+        this.free = free;
+    }
+}
+
+
+let sunflower = new Music("sunflower", "post malone", "spotify.png", 3, true);
+console.log(sunflower);

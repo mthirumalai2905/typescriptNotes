@@ -90,3 +90,34 @@ var Bottle = /** @class */ (function () {
 }());
 var b1 = new Bottle(); // new Bottle in the heap
 console.log(b1);
+// CONSTRUCTORS
+var BottleMaker = /** @class */ (function () {
+    function BottleMaker(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    return BottleMaker;
+}());
+var b11 = new BottleMaker("Milton", 1500);
+var HumanMaker = /** @class */ (function () {
+    function HumanMaker(name, isHandsome, isSmart) {
+        this.age = 1;
+    }
+    return HumanMaker;
+}());
+var sara = new HumanMaker("Sarah Tancredi", true, true);
+console.log(sara);
+// Another way of doing this 
+// we can initialize the constructor in a single line or just our simple java way old Skool
+var Music = /** @class */ (function () {
+    function Music(name, artist, thumbnail, length, free) {
+        this.name = name;
+        this.artist = artist;
+        this.thumbnail = thumbnail;
+        this.length = length;
+        this.free = free;
+    }
+    return Music;
+}());
+var sunflower = new Music("sunflower", "post malone", "spotify.png", 3, true);
+console.log(sunflower);
